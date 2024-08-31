@@ -19,6 +19,7 @@ const Profile = () => {
         <div>
           <p><strong>Name:</strong> {profile.name}</p>
           <p><strong>Email:</strong> {profile.email}</p>
+          <p><strong>Address:</strong> {profile.address}</p>
         </div>
       )}
       <h3 className="text-lg font-semibold mt-4">Menus</h3>

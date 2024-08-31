@@ -7,8 +7,10 @@ const ProfilePage = () => {
   return (
     <>
     <Header />
-    <div className="p-4">
+    <div className="container mx-auto">
+      <div className="py-4">
       <ProfileRestaurant />
+    </div>
     </div>
     </>
   );

@@ -59,7 +59,8 @@ const RestaurantPage = () => {
   return (
     <>
       <Header/>
-      <div className="p-4">
+      <div className="container mx-auto">
+      <div className="py-4">
         {restaurant && (
           <>
             <h1 className="text-2xl font-bold mb-4">{restaurant.name}</h1>
@@ -70,6 +71,7 @@ const RestaurantPage = () => {
             </div>
           </>
         )}
+      </div>
       </div>
     </>
   );
