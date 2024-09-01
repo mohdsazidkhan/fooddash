@@ -32,14 +32,14 @@ const HomePage = () => {
       <Header />
       <div className="p-4">
       <div className="container mx-auto">
-        <div className='flex justify-between items-center'>
+        <div className='flex flex-col md:flex-row justify-between items-center'>
         <h1 className="text-2xl font-bold mb-4">Nearby Restaurants</h1>
         <input
           type="text"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search by name or cuisine"
-          className="py-2 px-4 border rounded mb-4 w-1/3"
+          className="py-2 px-4 border rounded mb-4 w-full md:w-1/3"
         />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4  gap-4">

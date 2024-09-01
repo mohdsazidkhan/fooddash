@@ -7,7 +7,7 @@ const OrderBasket = ({ note, setNote, paymentMethod, setPaymentMethod, items, on
   return (
     <>
     {items?.length > 0 &&
-    <div className="p-4 border rounded-lg shadow-md w-1/3 mt-8">
+    <div className="p-4 border rounded-lg shadow-md w-full md:w-1/3 mt-8">
       <h2 className="text-xl font-bold mb-2">Order Basket</h2>
       <ul>
         {items.map(item => (

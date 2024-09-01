@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../components/Header';
+import { useNavigate } from 'react-router-dom';
 const OrderConfirmationPage = () => {
+  const navigate = useNavigate();
+  useEffect(()=>{
+    setTimeout(()=>{
+      navigate("/profile-customer")
+    },3000)  
+  },[navigate])
   return (
+   
     <>
     <Header/>
     <div className="container mx-auto">

@@ -14,7 +14,7 @@ const Profile = () => {
       .catch(error => console.error(error));
 
     axios.get(`${process.env.REACT_APP_API_BASE_URL}/orders/customer/${customer?.id}`) // replace with actual customer ID
-      .then(response => setOrderHistory(response.data))
+      .then(response => setOrderHistory(response?.data?.sort((a, b) => new Date(b.order_date) - new Date(a.order_date))))
       .catch(error => console.error(error));
   }, []);
 
@@ -59,6 +59,7 @@ const Profile = () => {
         </div>
       )}
       <h3 className="text-lg font-semibold mt-4 mb-2">Order History</h3>
+      {orderHistory?.length > 0 ?
       <ul className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 xl:grid-cols-3 gap-4'>
         {orderHistory.map(order => (
           <li key={order.id} className="p-2 border-2 rounded order flex justify-start items-start gap-4 shadow-md">
@@ -76,6 +77,9 @@ const Profile = () => {
           </li>
         ))}
       </ul>
+      :
+        <div>No Order Found</div>
+      }
     </div>
   );
 };

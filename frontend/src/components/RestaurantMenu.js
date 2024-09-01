@@ -12,7 +12,7 @@ const RestaurantMenu = ({ restaurantId, onAddToBasket }) => {
   }, [restaurantId]);
   console.log(dishes, ' dishes')
   return (
-    <div className={`${userType === "customer" ? 'w-2/3' : 'w-full'}`}>
+    <div className={`w-full ${userType === "customer" ? 'md:w-2/3' : 'w-full'}`}>
       <h2 className="text-xl font-bold">Menu</h2>
       <div className={`grid grid-cols-1 md:grid-cols-${userType === "customer" ? 3 : 4} lg:grid-cols-${userType === "customer" ? 3 : 4} xl:grid-cols-${userType === "customer" ? 3 : 4} gap-4`}>
         {dishes.map(dish => (

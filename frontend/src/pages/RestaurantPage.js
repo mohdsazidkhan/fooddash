@@ -59,13 +59,14 @@ const RestaurantPage = () => {
   return (
     <>
       <Header/>
+      
+      <div className="p-4">
       <div className="container mx-auto">
-      <div className="py-4">
         {restaurant && (
           <>
             <h1 className="text-2xl font-bold mb-4">{restaurant.name}</h1>
             <p className="mb-4">{restaurant.address}</p>
-            <div className='flex justify-between items-start gap-6'>
+            <div className='flex flex-col md:flex-row justify-between items-start gap-6'>
             <RestaurantMenu restaurantId={id} onAddToBasket={addToBasket} />
             {userType === "customer" && <OrderBasket note={note} setNote={setNote} paymentMethod={paymentMethod} setPaymentMethod={setPaymentMethod} items={basket} onRemove={removeFromBasket} onCheckout={handleCheckout} />}
             </div>
