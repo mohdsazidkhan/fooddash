@@ -5,6 +5,6 @@ then `npm run dev`
 
 for frontend `cd frontend`
 then run command `npm install`
-and then run `npm install`
+and then run `npm start`
 
 may be run success
