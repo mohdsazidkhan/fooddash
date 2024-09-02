@@ -1,4 +1,4 @@
-## Create foodash data in localhost of phpmyadmin
+Create `foodash` database in localhost of phpmyadmin
 after this `cd backend`
 then run command `npm install`
 then `npm run dev`
